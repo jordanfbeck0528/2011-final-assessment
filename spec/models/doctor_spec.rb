@@ -1,5 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe Doctor, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "validations" do
+    it { should validate_presence_of :name }
+    it { should validate_presence_of :years }
+    it { should validate_presence_of :niversity }
+  end
+
+  describe "relationships" do
+    it { should have_many :doctor_surgeries }
+    it { should have_many(:surgeries).through(:doctor_surgeries) }
+  end
 end
