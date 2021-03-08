@@ -6,23 +6,17 @@
 
   <ul>
   <h3>Most Experienced Doctor on Staff:</h3>
-      <%= @surgery.doctors.most[1] %>
-      <%= @surgery.doctors.most[2] %>
+    <div id="doctors-most-ex">
+      <%= @experienced_docs[1] %>
+      <%= @experienced_docs[2] %>
+    </div>
   </ul>
 
   <ul>
   <h3>Least Experienced Doctor on Staff:</h3>
-      <%= @surgery.doctors.most[1] %>
-      <%= @surgery.doctors.most[2] %>
+    <div id="doctors-least-ex">
+      <%= @inexperienced_docs[1] %>
+      <%= @inexperienced_docs[2] %>
+    </div>
   </ul>
 </section>
-
-<%= form_with url: doctor_sugeries_path, method: post, local: true do |form| %>
-  <%= form.label 'name' %>
-  <%= form.text_field :name %><br>
-  <%= form.label 'years' %>
-  <%= form.text_field :years %><br>
-  <%= form.label 'university' %>
-  <%= form.number_field :university %><br>
-  <%= form.submit 'Add Doctor' %>
-<% end %>

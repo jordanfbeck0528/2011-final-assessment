@@ -8,12 +8,12 @@ class Doctor < ApplicationRecord
     all.order(years: :desc)
   end
 
-  def self.most
-    order(years: :desc).pluck.first
-  end
-
-  def self.least
-    # require "pry"; binding.pry
-    order(:years).pluck.last
-  end
+  # def self.most
+  #   order(years: :desc).pluck.first
+  # end
+  #
+  # def self.least
+  #   require "pry"; binding.pry
+  #   order(:years).pluck.first
+  # end
 end
