@@ -4,7 +4,7 @@ RSpec.describe Doctor, type: :model do
   describe "validations" do
     it { should validate_presence_of :name }
     it { should validate_presence_of :years }
-    it { should validate_presence_of :niversity }
+    it { should validate_presence_of :university }
   end
 
   describe "relationships" do
