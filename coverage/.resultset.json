@@ -243,12 +243,63 @@
           1,
           null,
           1,
+          1,
+          null,
           null
         ]
       },
       "/Users/turingschool/turing/mod_3/ic/2011-final-assessment/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/turingschool/turing/mod_3/ic/2011-final-assessment/spec/features/surgeries/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          2,
+          2,
+          2,
+          null,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
@@ -280,6 +331,15 @@
           null,
           1,
           1,
+          null,
+          null,
+          1,
+          8,
+          null,
+          null,
+          1,
+          null,
+          0,
           null,
           null
         ]
@@ -354,8 +414,18 @@
           1,
           null
         ]
+      },
+      "/Users/turingschool/turing/mod_3/ic/2011-final-assessment/app/controllers/surgeries_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          2,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1615223734
+    "timestamp": 1615228495
   }
 }

@@ -7,4 +7,13 @@ class Doctor < ApplicationRecord
   def self.years_practiced
     all.order(years: :desc)
   end
+
+  def self.most
+    order(years: :desc).pluck.first
+  end
+
+  def self.least
+    # require "pry"; binding.pry
+    order(:years).pluck.last
+  end
 end

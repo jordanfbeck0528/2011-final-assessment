@@ -16,7 +16,7 @@ RSpec.describe 'As a user, when I visit the Doctor index', type: :feature do
     And I see that the doctors are listed in order of years practiced from most to least' do
 
     visit doctors_path
-save_and_open_page
+# save_and_open_page
     within("#doctor-#{@doctor_3.id}") do
       expect(page).to have_content(@doctor_3.name)
       expect(page).to have_content(@doctor_3.years)
