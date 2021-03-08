@@ -20,3 +20,13 @@
     </div>
   </ul>
 </section>
+
+<body>
+  <div class="add-doctor">
+    <%= form_with url: surgery_path(@surgery.id), method: :put do |form| %>
+      <%= form.label :name, "Doctor Name:" %>
+      <%= form.text_field :name %>
+      <%= form.submit "Add Doctor" %>
+    <% end %><br><br>
+  </div>
+</body>

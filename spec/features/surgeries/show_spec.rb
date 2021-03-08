@@ -34,7 +34,7 @@ RSpec.describe 'As a user, when I visit the surgery show page', type: :feature d
     in the appropriate section including thier name and their years practiced." do
 
     visit surgery_path(@surgery_1.id)
-save_and_open_page
+# save_and_open_page
     within("#doctors-most-ex") do
       expect(page).to have_content(@doctor_2.name)
       expect(page).to have_content(@doctor_2.years)
@@ -46,22 +46,23 @@ save_and_open_page
     end
   end
 
-  # it "I see a field with instructions to Add A Doctor To This Surgery
-  # When I input the name of an existing Doctor into that field
-  # And I click submit
-  # I'm taken back to that surgery's show page
-  # And I see the name of that doctor listed on the page" do
-  #
-  #   visit surgery_path(@surgery_1.id)
-  #
-  #   fill_in 'name', with: 'Megan'
-  #   fill_in 'years', with: 'Megan'
-  #   fill_in 'university', with: 'Megan'
-  #   click_on 'Add Doctor'
-  #
-  #   expect(current_path).to eq(surgery_path(@surgery_1.id))
-  #   expect(page).to have_content('Megan')
-  # end
+  it "I see a field with instructions to Add A Doctor To This Surgery
+  When I input the name of an existing Doctor into that field
+  And I click submit
+  I'm taken back to that surgery's show page
+  And I see the name of that doctor listed on the page" do
+
+    visit surgery_path(@surgery_1.id)
+
+    expect(page).to have_field("Doctor Name:")
+
+    fill_in 'name', with: 'Ian'
+    click_on 'Add Doctor'
+
+    expect(current_path).to eq(surgery_path(@surgery_1.id))
+    expect(page).to have_content('Ian')
+    save_and_open_page
+  end
 # (Note: you do not need to handle any sad paths)
 # (Note: you should not create a new doctor)
 end
