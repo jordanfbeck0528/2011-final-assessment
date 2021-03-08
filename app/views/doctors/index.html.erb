@@ -1,0 +1,12 @@
+<section class="doctors">
+  <h3>Doctors:</h3>
+  <ul>
+    <%@doctors.years_practiced.each do |doctor|%>
+      <div id="doctor-<%=doctor.id%>">
+        <li><%=doctor.name%></li>
+        <li><%=doctor.years%></li>
+        <li><%=doctor.university%></li>
+      </div>
+    <%end%>
+  </ul>
+</section>

@@ -277,6 +277,10 @@
           null,
           1,
           1,
+          null,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -334,8 +338,24 @@
           1,
           null
         ]
+      },
+      "/Users/turingschool/turing/mod_3/ic/2011-final-assessment/app/controllers/doctors_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/turingschool/turing/mod_3/ic/2011-final-assessment/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1615221523
+    "timestamp": 1615223734
   }
 }

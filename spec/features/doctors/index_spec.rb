@@ -16,14 +16,26 @@ RSpec.describe 'As a user, when I visit the Doctor index', type: :feature do
     And I see that the doctors are listed in order of years practiced from most to least' do
 
     visit doctors_path
-# save_and_open_page
-    expected_1 = [@doctor_3.name, @doctor_3.years, @doctor_3.university]
-    expected_2 = [@doctor_2.name, @doctor_2.years, @doctor_2.university]
-    expected_3 = [@doctor_1.name, @doctor_1.years, @doctor_1.university]
+save_and_open_page
+    within("#doctor-#{@doctor_3.id}") do
+      expect(page).to have_content(@doctor_3.name)
+      expect(page).to have_content(@doctor_3.years)
+      expect(page).to have_content(@doctor_3.university)
+    end
 
+    within("#doctor-#{@doctor_2.id}") do
+      expect(page).to have_content(@doctor_2.name)
+      expect(page).to have_content(@doctor_2.years)
+      expect(page).to have_content(@doctor_2.university)
+    end
 
-    expect(page).to have_content(expected_1)
-    expect(page).to have_content(expected_2)
-    expect(page).to have_content(expected_3)
+    within("#doctor-#{@doctor_1.id}") do
+      expect(page).to have_content(@doctor_1.name)
+      expect(page).to have_content(@doctor_1.years)
+      expect(page).to have_content(@doctor_1.university)
+    end
+
+    expect(@doctor_3.name).to appear_before(@doctor_2.name)
+    expect(@doctor_2.name).to appear_before(@doctor_1.name)
   end
 end
