@@ -7,12 +7,12 @@ class Surgery < ApplicationRecord
   def most
     # require "pry"; binding.pry
     # doctors.order(years: :desc).limit(1)
-    doctors.order(years: :desc).pluck.first
+    doctors.order(years: :desc).first
   end
 
   def least
     # require "pry"; binding.pry
     # doctors.order(:years).limit(1)
-    doctors.order(:years).pluck.first
+    doctors.order(:years).first
   end
 end

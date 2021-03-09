@@ -3,14 +3,19 @@ require 'rails_helper'
 RSpec.describe 'As a user, when I visit the surgery show page', type: :feature do
   before :each do
 
-    @doctor_1= Doctor.create!(name: "Jim", years: 15 , university: "Brown")
-    @doctor_2= Doctor.create!(name: "Kat", years: 20 , university: "Harvard")
-    @doctor_3= Doctor.create!(name: "Ian", years: 25 , university: "Stanford")
+    @doctor_1 = Doctor.create!(name: "Jim", years: 15 , university: "Brown")
+    @doctor_2 = Doctor.create!(name: "Kat", years: 20 , university: "Harvard")
+    @doctor_3 = Doctor.create!(name: "Ian", years: 25 , university: "Stanford")
 
-    @surgery_1 = @doctor_1.surgeries.create!(title: "brain" , day: "Monday", room: 1)
+    # @surgery_1 = @doctor_1.surgeries.create!(title: "brain" , day: "Monday", room: 1)
     # @surgery_1 = @doctor_2.surgeries.create!(title: "brain" , day: "Tuesday", room: 1)
 
-    @surgery_1.doctors << @doctor_2
+    @surgery_1 = Surgery.create!(title: "brain" , day: "Monday", room: 1)
+    # @surgery_1 = Surgery.create!(title: "brain" , day: "Tuesday", room: 1)
+
+    @surgery_1.doctors << [@doctor_1, @doctor_2]
+    # @surgery_1.doctors << @doctor_1
+    # @surgery_1.doctors << @doctor_2
 
     @surgery_2 = @doctor_2.surgeries.create!(title: "shoulder", day: "Tuesday", room: 2)
     @surgery_3 = @doctor_3.surgeries.create!(title: "heart", day: "Wednesday", room: 3)
