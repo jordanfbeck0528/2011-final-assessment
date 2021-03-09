@@ -14,9 +14,4 @@ class SurgeriesController < ApplicationController
 
     redirect_to surgery_path(@surgery.id)
   end
-
-  # private
-  # def doctor_surgeries_params
-  #   params.permit(:name, :years, :university)
-  # end
 end
